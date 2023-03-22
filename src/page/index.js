@@ -79,11 +79,11 @@ const Home = () => {
         {showProfile ? <Profile socket={socket} data={me} setEditModal={setModalEdit} /> : ''}
         <SearchBar handleSearch={(data) => handleSearch(data)} />
         <div className={style.chatlist}>
-          {user.map((data) => console.log(data))}
-          {/* {
-            user ? user.map(data => 
-            <Card name={data.fullname} selected={data.id === receiver_id} photo={data.photo} key={data.id} lastTime={data.lastTime} lastMessage={data.lastMessage} onClick={() => setReceiver_id(data.id)} />) : <div>No User</div>
-          } */}
+          {user ? (
+            user.map((data) => <Card name={data.fullname} selected={data.id === receiver_id} photo={data.photo} key={data.id} lastTime={data.lastTime} lastMessage={data.lastMessage} onClick={() => setReceiver_id(data.id)} />)
+          ) : (
+            <div>No User</div>
+          )}
         </div>
       </section>
       <section className={style.mainchat}>
