@@ -10,6 +10,8 @@ import io from 'socket.io-client';
 import Profile from '../components/module/Profile';
 import axios from 'axios';
 import ModalEdit from '../components/module/ModalEdit';
+import ChatSpaceGroup from '../components/module/ChatSpaceGroup';
+import CardGroup from '../components/module/CardGroup';
 
 const Home = () => {
   const { userOnline } = useSelector((state) => state);
@@ -20,6 +22,8 @@ const Home = () => {
   const [receiver_id, setReceiver_id] = useState('');
   const [socket, setSocket] = useState(null);
   const [modalEdit, setModalEdit] = useState(false);
+  const [room, setRoom] = useState(undefined);
+  console.log(room);
 
   const [me, setMe] = useState({});
 
@@ -78,16 +82,30 @@ const Home = () => {
         <Title callback={handleProfile} />
         {showProfile ? <Profile socket={socket} data={me} setEditModal={setModalEdit} /> : ''}
         <SearchBar handleSearch={(data) => handleSearch(data)} />
+        <div className="d-md-flex justify-content-around py-2 d-none">
+          <button className={`py-2 px-3 ${style.btnChatList}`}>All</button>
+          <button className={`py-2 px-3 ${style.btnChatList}`}>Important</button>
+          <button className={`py-2 px-3 ${style.btnChatList}`}>Unread</button>
+        </div>
         <div className={style.chatlist}>
           {user ? (
             user.map((data) => <Card name={data.fullname} selected={data.id === receiver_id} photo={data.photo} key={data.id} lastTime={data.lastTime} lastMessage={data.lastMessage} onClick={() => setReceiver_id(data.id)} />)
           ) : (
             <div>No User</div>
           )}
+
+          <CardGroup onClick={() => setRoom('Group')} />
         </div>
       </section>
       <section className={style.mainchat}>
-        <ChatSpace receiver_id={receiver_id} socket={socket} />
+        {/* <ChatSpace receiver_id={receiver_id} socket={socket} /> */}
+        {room === undefined ? (
+          <div className="d-flex justify-content-center align-items-center vh-100">
+            <p>Click to start chat</p>
+          </div>
+        ) : (
+          <ChatSpaceGroup room={room} socket={socket} me={me?.fullname} />
+        )}
       </section>
     </div>
   );
