@@ -1,7 +1,7 @@
 <br />
 <p align="center">
 
-  <h3 align="center">Blanja Application</h3>
+  <h3 align="center">Telegram Application</h3>
   <p align="center">
     <image align="center" width="100" src='/images/telegram.jpg' />
   </p>
