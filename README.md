@@ -71,6 +71,13 @@ Telegram is a web-based chat application. This server can manage all functions a
 
 <details>
   <summary>
+    Group Chat Page
+  </summary>
+<img src="./screenshot/group_chat.PNG" alt="group chat page" />
+</details>
+
+<details>
+  <summary>
     Friend Profile Page
   </summary>
 <img src="./screenshot/friend_profile.PNG" alt="friend profile page" />
