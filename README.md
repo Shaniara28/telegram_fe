@@ -64,58 +64,30 @@ Telegram is a web-based chat application. This server can manage all functions a
 
 <details>
   <summary>
-    Forgot Password Page
+    Private Chat Page
   </summary>
-<img src="./screenshot/forgot.PNG" alt="forgot password page" />
+<img src="./screenshot/private_chat.PNG" alt="private chat page" />
 </details>
 
 <details>
   <summary>
-    Landing Page
+    Friend Profile Page
   </summary>
-<img src="./screenshot/landing.PNG" alt="landing page" />
+<img src="./screenshot/friend_profile.PNG" alt="friend profile page" />
 </details>
 
 <details>
   <summary>
-    Product Detail Page
+    Profile Page
   </summary>
-<img src="./screenshot/detail.PNG" alt="product detail page" />
+<img src="./screenshot/profile.PNG" alt="profile page" />
 </details>
 
 <details>
   <summary>
-    MyBag Page
+    Edit Profile Page
   </summary>
-<img src="./screenshot/mybag.PNG" alt="mybag page" />
-</details>
-
-<details>
-  <summary>
-    Checkout Page
-  </summary>
-<img src="./screenshot/checkout.PNG" alt="checkout page" />
-</details>
-
-<details>
-  <summary>
-    Seller MyProduct
-  </summary>
-<img src="./screenshot/myproduct.PNG" alt="myproduct" />
-</details>
-
-<details>
-  <summary>
-    Seller Edit Product
-  </summary>
-<img src="./screenshot/editproduct.PNG" alt="update product" />
-</details>
-
-<details>
-  <summary>
-    Seller Insert Product
-  </summary>
-<img src="./screenshot/addproduct.PNG" alt="add product" />
+<img src="./screenshot/edit_profile.PNG" alt="edit profile page" />
 </details>
 
 ### Package Modules
