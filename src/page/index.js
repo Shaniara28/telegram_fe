@@ -94,18 +94,18 @@ const Home = () => {
             <div>No User</div>
           )}
 
-          <CardGroup onClick={() => setRoom('Group')} />
+          {/* <CardGroup onClick={() => setRoom('Group')} /> */}
         </div>
       </section>
       <section className={style.mainchat}>
-        {/* <ChatSpace receiver_id={receiver_id} socket={socket} /> */}
-        {room === undefined ? (
+        <ChatSpace receiver_id={receiver_id} socket={socket} />
+        {/* {room === undefined ? (
           <div className="d-flex justify-content-center align-items-center vh-100">
             <p>Click to start chat</p>
           </div>
         ) : (
           <ChatSpaceGroup room={room} socket={socket} me={me?.fullname} />
-        )}
+        )} */}
       </section>
     </div>
   );
